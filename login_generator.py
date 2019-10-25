@@ -17,6 +17,11 @@ class User:
         self.password = password
 
 
-for i in range (1, 10):
-    user_i = User(random.choice(names) + '.' + random.choice(surnames) + str(random.randrange(100)) + random.choice(domain_list), ''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits + string.punctuation) for i in range (10)))
-    print('User ' + str(i) + ' generated email: ' + user_i.email + '\nUser ' + str(i) + ' generated password: ' + user_i.password)
+for i in range (1, 11):
+    user_i = User(random.choice(names) + '.' +\
+    random.choice(surnames) + str(random.randrange(100)) +\
+    random.choice(domain_list), ''.join(random.choice(string.ascii_uppercase +\
+    string.ascii_lowercase + string.digits + string.punctuation) for i in range (10)))
+    
+    print('\nUser ' + str(i) + ' generated email: ' + user_i.email +\
+    '\nUser ' + str(i) + ' generated password: ' + user_i.password)
