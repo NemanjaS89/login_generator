@@ -1,6 +1,7 @@
 import json
 import random
 import os
+import string
 
 dirname = os.path.dirname(__file__)
 names_json = os.path.join(dirname, 'names.json')
@@ -17,6 +18,6 @@ class User:
 
 
 for i in range (10):
-    user_i = User(random.choice(names) + '.' + random.choice(surnames) + str(random.randrange(100)) + random.choice(domain_list), random.choice(surnames))
+    user_i = User(random.choice(names) + '.' + random.choice(surnames) + str(random.randrange(100)) + random.choice(domain_list), ''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits + string.punctuation) for i in range (10)))
     print(user_i.email)
     print(user_i.password)
