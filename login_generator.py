@@ -18,8 +18,8 @@ class User:
 
 
 for i in range (1, 11):
-    user_i = User(random.choice(names) + '.' +\
-    random.choice(surnames) + str(random.randrange(100)) +\
+    user_i = User(str(random.choice(names)).lower() + '.' +\
+    str(random.choice(surnames)).lower() + str(random.randrange(100)) +\
     random.choice(domain_list), ''.join(random.choice(string.ascii_uppercase +\
     string.ascii_lowercase + string.digits + string.punctuation) for i in range (10)))
     
